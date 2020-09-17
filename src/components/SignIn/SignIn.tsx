@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './SignIn.scss';
 import FormInput from '../FormInput/FormInput';
 import Button from '../Button/Button';
+import { signInWithGoogle } from '../../utils/firebase';
 
 const SignIn = () => {
   const [state, setState] = useState({ email: '', password: '' });
@@ -38,7 +39,12 @@ const SignIn = () => {
           required
           label="Password"
         />
-        <Button type="submit">SIGN IN</Button>
+        <div className="buttons">
+          <Button type="submit">SIGN IN</Button>
+          <Button googleSignIn onClick={signInWithGoogle}>
+            SIGN IN WITH GOOGLE
+          </Button>
+        </div>
       </form>
     </div>
   );

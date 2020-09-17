@@ -2,11 +2,11 @@ import React, { ButtonHTMLAttributes } from 'react';
 import './Button.scss';
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
-  //   handleClick: (e: MouseEvent<HTMLButtonElement>) => void;
+  googleSignIn?: boolean;
 }
 
-const Button = ({ children, ...props }: Props) => (
-  <button className="custom-button" {...props}>
+const Button = ({ children, googleSignIn, ...props }: Props) => (
+  <button className={`custom-button ${googleSignIn ? 'google-sign-in' : ''}`} {...props}>
     {children}
   </button>
 );
