@@ -12,7 +12,7 @@ const reducers = {
 
 const rootReducer = combineReducers(reducers);
 
-type RootState = ReturnType<typeof rootReducer>;
+export type RootState = ReturnType<typeof rootReducer>;
 
 export const useTypedSelector: TypedUseSelectorHook<RootState> = useSelector;
 

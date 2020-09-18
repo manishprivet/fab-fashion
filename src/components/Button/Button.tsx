@@ -3,10 +3,18 @@ import './Button.scss';
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   googleSignIn?: boolean;
+  inverted?: boolean;
 }
 
-const Button = ({ children, googleSignIn, ...props }: Props) => (
-  <button className={`custom-button ${googleSignIn ? 'google-sign-in' : ''}`} {...props}>
+const Button = ({ children, googleSignIn, inverted, ...props }: Props) => (
+  <button
+    className={`
+      custom-button
+      ${inverted ? 'inverted' : ''}
+      ${googleSignIn ? 'google-sign-in' : ''}
+    `}
+    {...props}
+  >
     {children}
   </button>
 );
