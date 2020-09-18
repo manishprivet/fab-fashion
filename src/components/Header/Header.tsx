@@ -2,10 +2,12 @@ import React from 'react';
 import './Header.scss';
 import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/crown.svg';
-import { User } from 'firebase';
 import { auth } from '../../utils/firebase';
+import { useTypedSelector } from '../../redux/rootReducer';
 
-const Header = ({ currentUser }: { currentUser: User | null }) => {
+const Header = () => {
+  const currentUser = useTypedSelector((state) => state.user.currentUser);
+
   return (
     <div className="header">
       <Link className="logo-container" to="/">
