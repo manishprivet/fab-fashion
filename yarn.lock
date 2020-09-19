@@ -1957,6 +1957,18 @@
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.6.tgz#f4c7ec43e81b319a9815115031709f26987891f0"
   integrity sha512-3c+yGKvVP5Y9TYBEibGNR+kLtijnj7mYrXRg+WpFb2X9xm04g/DXYkfg4hmzJQosc9snFNUPkbYIhu+KAm6jJw==
 
+"@types/lodash.memoize@^4.1.6":
+  version "4.1.6"
+  resolved "https://registry.yarnpkg.com/@types/lodash.memoize/-/lodash.memoize-4.1.6.tgz#3221f981790a415cab1a239f25c17efd8b604c23"
+  integrity sha512-mYxjKiKzRadRJVClLKxS4wb3Iy9kzwJ1CkbyKiadVxejnswnRByyofmPMscFKscmYpl36BEEhCMPuWhA1R/1ZQ==
+  dependencies:
+    "@types/lodash" "*"
+
+"@types/lodash@*":
+  version "4.14.161"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.161.tgz#a21ca0777dabc6e4f44f3d07f37b765f54188b18"
+  integrity sha512-EP6O3Jkr7bXvZZSZYlsgt5DIjiGr0dXP1/jVEwVLTFgg0d+3lWVQkRavYVQszV7dYUwvg0B8R0MBDpcmXg7XIA==
+
 "@types/long@^4.0.1":
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/@types/long/-/long-4.0.1.tgz#459c65fa1867dafe6a8f322c4c51695663cc55e9"
@@ -2059,6 +2071,13 @@
   integrity sha512-zM+cxiSw6nZtRbxpVp9SE3x/X77Z7e7YAfHD1NkxJyJbAGSXJGF0E9aqajZfPOa/sTYnuwutmlCldveExuCeLw==
   dependencies:
     redux "^4.0.0"
+
+"@types/redux-persist@^4.3.1":
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/@types/redux-persist/-/redux-persist-4.3.1.tgz#aa4c876859e0bea5155e5f7980e5b8c4699dc2e6"
+  integrity sha1-qkyHaFngvqUVXl95gOW4xGmdwuY=
+  dependencies:
+    redux-persist "*"
 
 "@types/redux@^3.6.0":
   version "3.6.0"
@@ -9959,6 +9978,11 @@ redux-logger@^3.0.6:
   integrity sha1-91VZZvMJjzyIYExEnPC69XeCdL8=
   dependencies:
     deep-diff "^0.3.5"
+
+redux-persist@*, redux-persist@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/redux-persist/-/redux-persist-6.0.0.tgz#b4d2972f9859597c130d40d4b146fecdab51b3a8"
+  integrity sha512-71LLMbUq2r02ng2We9S215LtPu3fY0KgaGE0k8WRgl6RkqxtGfl7HUozz1Dftwsb0D/5mZ8dwAaPbtnzfvbEwQ==
 
 redux@*, redux@^4.0.0, redux@^4.0.5:
   version "4.0.5"

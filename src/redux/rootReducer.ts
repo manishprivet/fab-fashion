@@ -1,13 +1,25 @@
 import { combineReducers } from 'redux';
 import { useSelector, TypedUseSelectorHook } from 'react-redux';
+import { persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
 
 import userReducer from './user/userReducer';
 import { Actions } from './constants';
 import cartReducer from './cart/cartReducer';
+import directoryReducer from './directory/directoryReducer';
+import shopReducer from './shop/shopReducer';
+
+const persistConfig = {
+  key: 'root',
+  storage,
+  whiteList: ['cart'],
+};
 
 const reducers = {
   user: userReducer,
   cart: cartReducer,
+  directory: directoryReducer,
+  shop: shopReducer,
 };
 
 const rootReducer = combineReducers(reducers);
@@ -21,4 +33,4 @@ export interface DispatchAction {
   payload?: any;
 }
 
-export default rootReducer;
+export default persistReducer(persistConfig, rootReducer);

@@ -1,3 +1,5 @@
+export type CollectionUrlParams = 'hats' | 'sneakers' | 'jackets' | 'womens' | 'mens';
+
 export interface Item {
   id: number;
   name: string;
@@ -13,8 +15,8 @@ export interface ItemSection {
   items: Item[];
 }
 
-export const SHOP_DATA: ItemSection[] = [
-  {
+export const SHOP_DATA: Record<CollectionUrlParams, ItemSection> = {
+  hats: {
     id: 1,
     title: 'Hats',
     routeName: 'hats',
@@ -84,7 +86,7 @@ export const SHOP_DATA: ItemSection[] = [
       },
     ],
   },
-  {
+  sneakers: {
     id: 2,
     title: 'Sneakers',
     routeName: 'sneakers',
@@ -147,7 +149,7 @@ export const SHOP_DATA: ItemSection[] = [
       },
     ],
   },
-  {
+  jackets: {
     id: 3,
     title: 'Jackets',
     routeName: 'jackets',
@@ -189,7 +191,7 @@ export const SHOP_DATA: ItemSection[] = [
       },
     ],
   },
-  {
+  womens: {
     id: 4,
     title: 'Womens',
     routeName: 'womens',
@@ -245,7 +247,7 @@ export const SHOP_DATA: ItemSection[] = [
       },
     ],
   },
-  {
+  mens: {
     id: 5,
     title: 'Mens',
     routeName: 'mens',
@@ -294,4 +296,4 @@ export const SHOP_DATA: ItemSection[] = [
       },
     ],
   },
-];
+};
